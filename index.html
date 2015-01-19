@@ -13,18 +13,25 @@
 	</form>
 	<script src="jquery.js"></script>
 	<script >
-	$( "form").submit(function( event)){
-		mometamanho =$("imput"). val().length();
-		console.writeln(nometamanho);
+
+	console.log('passou aqui');
+
+
+	$( "form" ).submit(function(event){
+		alert('oooooo');
+
+		nometamanho =$("input").val().length;
+		console.log(nometamanho);
 
 		if( nometamanho<5){
 			$( ".nome-erro").show();
-			return;
+			return false;
 		}
        
        event.preventDefault();
 	});
     </script>
+
 
 </body>
 </html>

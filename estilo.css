@@ -1,8 +1,8 @@
 body,
-imput{
-	font-size: 3 em;
+input{
+	font-size: 3em;
 }
 
 .nome-erro{
-	display: nome;
+	display: none;
 }
