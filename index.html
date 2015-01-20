@@ -9,7 +9,21 @@
 	<form action="index.html" method="post" accept-charset="utf-8">
 		<label for="nome">Nome</label>
 	<input id="nome" type="text" name="nome" value="">
+
 	<span class="nome-erro">o nome deve ter mais de 3 letras</span>
+	
+   <label for="password">password</label>
+	<input id="password" type="password" nome="password" value="" required>
+
+	<label for="password-confirm">password confirm</label>
+	<input id="password_confirm" type="password" nome="password_confirm" value=""required>
+     <span class="password-erro">as passwords devem ser iguais</span>
+
+    <label for="omeuemail">Email</label>
+	<input id="omeuemail" type="email" nome="omeuemail" value="" required>
+
+    <input type="submit">
+
 	</form>
 	<script src="jquery.js"></script>
 	<script >
@@ -18,7 +32,7 @@
 
 
 	$( "form" ).submit(function(event){
-		alert('oooooo');
+		console.log('oooooo');
 
 		nometamanho =$("input").val().length;
 		console.log(nometamanho);
@@ -27,7 +41,21 @@
 			$( ".nome-erro").show();
 			return false;
 		}
-       
+       $( ".nome-erro").hide();
+
+
+      console.log($("#password").val());
+       console.log($("#password_confirm").val());
+
+      if( $( "#password").val() !=$("#password_confirm").val() ) {
+      	$( ".password-erro").show();
+       return false;
+		}
+
+     $( ".password-erro").hide();
+
+
+
        event.preventDefault();
 	});
     </script>

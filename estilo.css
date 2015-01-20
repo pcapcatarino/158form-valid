@@ -1,8 +1,12 @@
 body,
 input{
-	font-size: 3em;
+	font-size: 2em;
 }
 
+.nome-erro{
+	display: none;
+}
+.password-erro,
 .nome-erro{
 	display: none;
 }
